@@ -20,16 +20,18 @@ using System.Globalization;
 using System.Net.Sockets;
 using WinSCP;
 using System.Reflection;
+using System.Drawing.Printing;
 
 
 namespace tharsis_s
 {
     public partial class Form1 : Form
     {
-
+        // some other additional code in case doesnt work
+        Bitmap memoryImage;
         #region TANIMLAMALAR
 
-       
+
         bool isRecording = false;
 
         //int isVideoSend = -200;
@@ -90,6 +92,24 @@ namespace tharsis_s
             txtBuild();
 
         }
+
+        // additional code 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Graphics myGraphics = this.CreateGraphics();
+            Size s = this.Size;
+            memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
+            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+            memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
+
+            printDocument1.Print();
+
+        }
+        private void PrintDocument1_PrintPage(System.Object sender,
+           System.Drawing.Printing.PrintPageEventArgs e) =>
+               e.Graphics.DrawImage(memoryImage, 0, 0);
+        // ends here
+
         private void Form1_Load(object sender, EventArgs e)
         {
             #region SERIAL PORT SETUP
@@ -121,10 +141,12 @@ namespace tharsis_s
         }
 
         // FUNCTIONS
+
+        // some additional code will be written here and far beyond this area
         
 
 
-        private void drawMap(string gps1Latitude, string gps1Longitude, string gps2Latitude, string gps2Longitude)
+    private void drawMap(string gps1Latitude, string gps1Longitude, string gps2Latitude, string gps2Longitude)
         {
             double lat1 = double.Parse(gps1Latitude, CultureInfo.InvariantCulture);
             double lat2 = double.Parse(gps2Latitude, CultureInfo.InvariantCulture);
@@ -729,9 +751,8 @@ namespace tharsis_s
 
         }
 
-        private void label29_Click_1(object sender, EventArgs e)
-        {
-                    }
+      
+
     }
 
     

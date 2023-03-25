@@ -117,35 +117,39 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.savePhotoButton = new System.Windows.Forms.Button();
             this.takePhotoButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gMap = new GMap.NET.WindowsForms.GMapControl();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.baglanLabel = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
             this.irtifaLabel = new System.Windows.Forms.Label();
+            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
+            this.rpySimulation = new tharsis_s.UserControl1();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.label24 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.hızChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.basıncChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sıcaklıkChart)).BeginInit();
@@ -154,17 +158,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.veriGrid)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel5.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -989,6 +993,7 @@
             this.panel3.Controls.Add(this.savePhotoButton);
             this.panel3.Controls.Add(this.takePhotoButton);
             this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.gMap);
             this.panel3.Location = new System.Drawing.Point(728, 14);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
@@ -1022,6 +1027,45 @@
             this.takePhotoButton.UseVisualStyleBackColor = false;
             this.takePhotoButton.Click += new System.EventHandler(this.takePhotoButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::tharsis_s.Properties.Resources.photo_2023_01_28_19_41_49;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 62);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(453, 277);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 65;
+            this.pictureBox1.TabStop = false;
+            // 
+            // gMap
+            // 
+            this.gMap.Bearing = 0F;
+            this.gMap.CanDragMap = true;
+            this.gMap.EmptyTileColor = System.Drawing.Color.Navy;
+            this.gMap.GrayScaleMode = false;
+            this.gMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.gMap.LevelsKeepInMemory = 5;
+            this.gMap.Location = new System.Drawing.Point(-117, 384);
+            this.gMap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gMap.MarkersEnabled = true;
+            this.gMap.MaxZoom = 2;
+            this.gMap.MinZoom = 2;
+            this.gMap.MouseWheelZoomEnabled = true;
+            this.gMap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.gMap.Name = "gMap";
+            this.gMap.NegativeMode = false;
+            this.gMap.PolygonsEnabled = true;
+            this.gMap.RetryLoadTile = 0;
+            this.gMap.RoutesEnabled = true;
+            this.gMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.gMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.gMap.ShowTileGridLines = false;
+            this.gMap.Size = new System.Drawing.Size(124, 167);
+            this.gMap.TabIndex = 67;
+            this.gMap.Zoom = 0D;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightSlateGray;
@@ -1034,6 +1078,29 @@
             this.panel4.Size = new System.Drawing.Size(474, 400);
             this.panel4.TabIndex = 70;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::tharsis_s.Properties.Resources.photo_2023_01_28_19_18_11;
+            this.pictureBox3.Location = new System.Drawing.Point(7, 85);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(453, 277);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 75;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.SystemColors.Menu;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label24.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label24.Location = new System.Drawing.Point(277, 43);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(170, 29);
+            this.label24.TabIndex = 74;
+            this.label24.Text = "GÖREV YÜKÜ";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.LightSlateGray;
@@ -1043,8 +1110,88 @@
             this.panel5.Location = new System.Drawing.Point(39, 14);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(194, 448);
+            this.panel5.Size = new System.Drawing.Size(194, 400);
             this.panel5.TabIndex = 71;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.LawnGreen;
+            this.panel8.Controls.Add(this.label34);
+            this.panel8.Controls.Add(this.label33);
+            this.panel8.Controls.Add(this.label32);
+            this.panel8.Controls.Add(this.label31);
+            this.panel8.Controls.Add(this.label30);
+            this.panel8.Controls.Add(this.label29);
+            this.panel8.Location = new System.Drawing.Point(3, 54);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(186, 358);
+            this.panel8.TabIndex = 0;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.Black;
+            this.label34.Location = new System.Drawing.Point(7, 251);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(100, 25);
+            this.label34.TabIndex = 5;
+            this.label34.Text = "Kurtarma";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Black;
+            this.label33.Location = new System.Drawing.Point(7, 206);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(165, 25);
+            this.label33.TabIndex = 4;
+            this.label33.Text = "Görev Yükü İniş";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Black;
+            this.label32.Location = new System.Drawing.Point(10, 163);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(84, 25);
+            this.label32.TabIndex = 3;
+            this.label32.Text = "Ayrılma";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Black;
+            this.label31.Location = new System.Drawing.Point(11, 117);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(167, 25);
+            this.label31.TabIndex = 2;
+            this.label31.Text = "Model Uydu İniş";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.Location = new System.Drawing.Point(13, 71);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(106, 25);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "Yükselme";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Black;
+            this.label29.Location = new System.Drawing.Point(13, 23);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(129, 25);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Uçuşa Hazır";
             // 
             // panel6
             // 
@@ -1089,13 +1236,25 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.button2);
             this.panel7.Controls.Add(this.label28);
             this.panel7.Controls.Add(this.irtifaLabel);
+            this.panel7.Controls.Add(this.elementHost1);
             this.panel7.Location = new System.Drawing.Point(243, 425);
             this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1756, 367);
             this.panel7.TabIndex = 71;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(256, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 42);
+            this.button2.TabIndex = 69;
+            this.button2.Text = "print-prototype";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label28
             // 
@@ -1120,6 +1279,16 @@
             this.irtifaLabel.Size = new System.Drawing.Size(13, 20);
             this.irtifaLabel.TabIndex = 17;
             this.irtifaLabel.Text = ".";
+            // 
+            // elementHost1
+            // 
+            this.elementHost1.Location = new System.Drawing.Point(1057, 88);
+            this.elementHost1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.elementHost1.Name = "elementHost1";
+            this.elementHost1.Size = new System.Drawing.Size(340, 311);
+            this.elementHost1.TabIndex = 68;
+            this.elementHost1.Text = "elementHost1";
+            this.elementHost1.Child = this.rpySimulation;
             // 
             // label26
             // 
@@ -1164,6 +1333,18 @@
             this.panel1.Size = new System.Drawing.Size(472, 400);
             this.panel1.TabIndex = 67;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::tharsis_s.Properties.Resources.c6c6b391_e149_40c7_96f3_8ef92db1c1c6;
+            this.pictureBox4.Location = new System.Drawing.Point(4, 64);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(330, 277);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 68;
+            this.pictureBox4.TabStop = false;
+            // 
             // backgroundWorker1
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
@@ -1172,111 +1353,6 @@
             // 
             this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.SystemColors.Menu;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label24.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label24.Location = new System.Drawing.Point(277, 43);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(170, 29);
-            this.label24.TabIndex = 74;
-            this.label24.Text = "GÖREV YÜKÜ";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.LawnGreen;
-            this.panel8.Controls.Add(this.label35);
-            this.panel8.Controls.Add(this.label34);
-            this.panel8.Controls.Add(this.label33);
-            this.panel8.Controls.Add(this.label32);
-            this.panel8.Controls.Add(this.label31);
-            this.panel8.Controls.Add(this.label30);
-            this.panel8.Controls.Add(this.label29);
-            this.panel8.Location = new System.Drawing.Point(3, 54);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(186, 389);
-            this.panel8.TabIndex = 0;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(13, 23);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(129, 25);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Uçuşa Hazır";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(13, 71);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(106, 25);
-            this.label30.TabIndex = 1;
-            this.label30.Text = "Yükselme";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Location = new System.Drawing.Point(11, 117);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(167, 25);
-            this.label31.TabIndex = 2;
-            this.label31.Text = "Model Uydu İniş";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(10, 163);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(84, 25);
-            this.label32.TabIndex = 3;
-            this.label32.Text = "Ayrılma";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Location = new System.Drawing.Point(7, 206);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(165, 25);
-            this.label33.TabIndex = 4;
-            this.label33.Text = "Görev Yükü İniş";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(7, 251);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(100, 25);
-            this.label34.TabIndex = 5;
-            this.label34.Text = "Kurtarma";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.Black;
-            this.label35.Location = new System.Drawing.Point(6, 296);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(165, 25);
-            this.label35.TabIndex = 6;
-            this.label35.Text = "Paket Vid Alindi";
-            // 
             // label36
             // 
             this.label36.AutoSize = true;
@@ -1284,15 +1360,15 @@
             this.label36.ForeColor = System.Drawing.Color.Black;
             this.label36.Location = new System.Drawing.Point(7, 12);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(199, 25);
+            this.label36.Size = new System.Drawing.Size(165, 25);
             this.label36.TabIndex = 7;
-            this.label36.Text = "Paket Vid Gönderdı";
+            this.label36.Text = "Paket Vid Alindi";
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel9.Controls.Add(this.label36);
-            this.panel9.Location = new System.Drawing.Point(44, 399);
+            this.panel9.Location = new System.Drawing.Point(44, 354);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(181, 51);
             this.panel9.TabIndex = 0;
@@ -1306,40 +1382,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 73;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::tharsis_s.Properties.Resources.photo_2023_01_28_19_41_49;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 62);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(453, 277);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 65;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::tharsis_s.Properties.Resources.photo_2023_01_28_19_18_11;
-            this.pictureBox3.Location = new System.Drawing.Point(7, 85);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(453, 277);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 75;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::tharsis_s.Properties.Resources.c6c6b391_e149_40c7_96f3_8ef92db1c1c6;
-            this.pictureBox4.Location = new System.Drawing.Point(4, 64);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(330, 277);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 68;
-            this.pictureBox4.TabStop = false;
             // 
             // Form1
             // 
@@ -1396,24 +1438,24 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1505,7 +1547,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
@@ -1515,6 +1556,11 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private GMap.NET.WindowsForms.GMapControl gMap;
+        private System.Windows.Forms.Integration.ElementHost elementHost1;
+        private UserControl1 rpySimulation;
+        private System.Windows.Forms.Button button2;
     }
 }
 
